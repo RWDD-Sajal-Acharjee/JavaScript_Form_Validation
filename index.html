@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <div class="mainPage display-flex justify-cntn-center align-item-center" >
+        <div class="formContainer display-flex justify-cntn-center">
+            <form>
+                <fieldset>
+                    <legend>Login Form</legend>
+                    <div class="allInput">
+                        <div class="inputgroup display-flex flex-direction-col align-item-center">
+                            <input type="text" id="username" placeholder="User Name">
+                            <small id="usernameErr"></small>
+                        </div>
+        
+                        <div class="inputgroup display-flex flex-direction-col align-item-center">
+                            <input type="password" id="password" placeholder="Password">
+                            <small id="passwordErr"></small>
+                        </div>
+    
+                        <div class="buttongroup display-flex align-item-center">
+                            <input type="button" value="Sign Up" id="trigger">
+                            <input type="button" value="Login" onclick=" return login();">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="signUpPage justify-cntn-center align-item-center" id="modal">
+        <div class="SignUpformContainer display-flex justify-cntn-center" id="signUpFormContainer">
+            <form>
+                <fieldset>
+                    <legend>Sign Up Form <span class="close" id="close">&times;</span></legend>
+                    <div class="allInput">
+                        <div class="inputgroup display-flex flex-direction-col align-item-center position-relative">
+                            <input type="text" id="firstName" placeholder="First Name">
+                            <small class="position-absolute" id="firstNameErr"></small>
+                        </div>
+                        
+                        <div class="inputgroup display-flex flex-direction-col align-item-center  position-relative">
+                            <input type="text" id="lastName" placeholder="Last Name">
+                            <small class="position-absolute" id="lastNameErr"></small>
+                        </div>
+                        <div class="inputgroup display-flex flex-direction-col align-item-center  position-relative">
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                            <small class="position-absolute" id="emailErr"></small>
+                        </div>
+                        <div class="inputgroup display-flex flex-direction-col align-item-center  position-relative">
+                            <input type="password" id="SignUppassword" placeholder="Password">
+                            <small class="position-absolute" id="SignuppasswordErr"></small>
+                        </div>
+                        <div class="inputgroup display-flex flex-direction-col align-item-center  position-relative">
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                            <small class="position-absolute" id="confirmPasswordErr"></small>
+                        </div>
+    
+                        <div class="inputgroup display-flex align-item-center">
+                            <button onclick="return signUp();">Sign Up</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
